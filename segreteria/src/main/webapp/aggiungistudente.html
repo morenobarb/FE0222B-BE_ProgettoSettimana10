@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Aggiungi studente</title>
+</head>
+<body>
+	<form action="#" method="post" th:action="@{/studenti/inserisci}"
+		th:object="${studente}">
+		
+		<div>Matricola: <input type="text" th:field="*{matricola}" id="matricola"></div>
+		<div>Nome : <input type="text" th:field="*{nome}" id="nome"></div>
+		<div>Cognome : <input type="text" th:field="*{cognome}" id="cognome"></div>
+		<div>Data di nascita : <input type="text" th:field="*{dataDiNascita}" id="dataDiNascita"></div>
+		<div>E-mail : <input type="email" th:field="*{email}" id="email"></div>
+		<div>Citta : <input type="text" th:field="*{citta}" id="citta"></div>
+		<div>Corso:
+		<select th:field="*{corso}">
+		<option value="">Seleziona un Corso</option>
+		<option th:each="c : ${corsi}"th:value="${c.codice}" th:text="${c.codice}"></option>
+		</select>
+		</div>
+		<input type="submit" value="Conferma">
+		</form>
+</body>
+</html>

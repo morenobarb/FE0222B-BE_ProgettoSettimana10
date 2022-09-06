@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista studenti</title>
+</head>
+<body>
+	<h1>Lista studenti</h1>
+	<table>
+		<div th:each="s:${studenti}">
+		<tr>
+		<td th:text="${s.matricola}"></td>
+		<td th:text="${s.nome}"></td>
+		<td th:text="${s.cognome}"></td>
+		<td th:text="${s.dataDiNascita}"></td>
+		<td th:text="${s.email}"></td>
+		<td th:text="${s.citta}"></td>
+		<td th:text="${s.corso}"></td>
+		
+		
+		</tr>
+		
+		</div>
+
+	</table>
+
+</body>
+</html>

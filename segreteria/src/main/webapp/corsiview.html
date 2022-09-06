@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista corsi</title>
+</head>
+<body>
+	<h1>Lista corsi</h1>
+	<table>
+		<div th:each="s:${corsi}">
+		<tr>
+		<td th:text="${s.codice}"></td>
+		<td th:text="${s.materia}"></td>
+		<td th:text="${s.indirizzo}"></td>
+		<td th:text="${s.numeroEsami}"></td>
+	
+		
+		
+		</tr>
+		
+		</div>
+
+	</table>
+
+</body>
+</html>

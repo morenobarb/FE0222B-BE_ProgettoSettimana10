@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Aggiungi corso</title>
+</head>
+<body>
+	<form action="#" method="post" th:action="@{/corsi/inserisci}"
+		th:object="${corso}">
+		
+		<div>Codice: <input type="text" th:field="*{codice}" id="codice"></div>
+		<div>Materia : <input type="text" th:field="*{materia}" id="materia"></div>
+		<div>Indirizzo : <input type="text" th:field="*{indirizzo}" id="indirizzo"></div>
+		<div>Numero esami : <input type="text" th:field="*{numeroEsami}" id="numeroEsami"></div>
+
+		<input type="submit" value="Conferma">
+		</form>
+</body>
+</html>
